@@ -1,0 +1,45 @@
+{
+  "name": "anonexam-platform",
+  "version": "1.0.0",
+  "description": "Anonymous Encrypted Online Exam Platform - Full Stack Application",
+  "private": true,
+  "workspaces": [
+    "action/fhevm-hardhat-template",
+    "action/frontend"
+  ],
+  "scripts": {
+    "build": "npm run build:contracts && npm run build:frontend",
+    "build:contracts": "cd action/fhevm-hardhat-template && npm run build",
+    "build:frontend": "cd action/frontend && npm run build",
+    "build:static": "npm run build:contracts && npm run build:frontend:static",
+    "build:frontend:static": "cd action/frontend && GITHUB_ACTIONS=true npm run build",
+    "dev": "npm run dev:contracts & npm run dev:frontend",
+    "dev:contracts": "cd action/fhevm-hardhat-template && npm run node",
+    "dev:frontend": "cd action/frontend && npm run dev",
+    "clean": "npm run clean:contracts && npm run clean:frontend",
+    "clean:contracts": "cd action/fhevm-hardhat-template && npm run clean",
+    "clean:frontend": "cd action/frontend && rm -rf .next out",
+    "install:all": "npm install && cd action/fhevm-hardhat-template && npm install && cd ../frontend && npm install",
+    "deploy:localhost": "cd action/fhevm-hardhat-template && npm run deploy:localhost",
+    "deploy:sepolia": "cd action/fhevm-hardhat-template && npm run deploy:sepolia",
+    "start": "cd action/frontend && npm run start",
+    "test": "cd action/fhevm-hardhat-template && npm run test"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=7.0.0"
+  },
+  "keywords": [
+    "fhevm",
+    "blockchain",
+    "privacy",
+    "exam",
+    "education",
+    "fullstack"
+  ],
+  "author": "AnonExam Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

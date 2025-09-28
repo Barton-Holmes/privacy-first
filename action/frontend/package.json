@@ -1,0 +1,63 @@
+{
+  "name": "anonexam-frontend",
+  "version": "1.0.0",
+  "description": "Anonymous Encrypted Online Exam Platform - Frontend",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "genabi": "node scripts/genabi.mjs",
+    "deploy-hardhat-node": "bash scripts/deploy-hardhat-node.sh",
+    "is-hardhat-node-running": "node scripts/is-hardhat-node-running.mjs"
+  },
+  "dependencies": {
+    "@fhevm/mock-utils": "^0.1.0",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@zama-fhe/relayer-sdk": "^0.2.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "ethers": "^6.8.0",
+    "idb": "^7.1.1",
+    "lucide-react": "^0.460.0",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.8.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "fhevm",
+    "blockchain",
+    "privacy",
+    "exam",
+    "education",
+    "nextjs"
+  ],
+  "author": "AnonExam Team",
+  "license": "MIT"
+}
